@@ -5,10 +5,8 @@ import slugify from 'slugify';
 
 class Feature extends Component {
     render() {
-        console.log(this.props.features)
-        console.log(this.props.feature)
         const feature = this.props.feature
-        const options = this.props.features[feature].map(item => {
+        const options = feature.map(item => {
             const itemHash = slugify(JSON.stringify(item));
             return (
                 <div key={itemHash} className="feature__item">

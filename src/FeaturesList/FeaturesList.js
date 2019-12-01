@@ -13,7 +13,7 @@ class FeaturesList extends Component {
                     </legend>
                     <Feature 
                     feature={feature}
-                    features={this.props.features}
+                    // features={this.props.features}
                     value={this.props.value}/>
                 </fieldset>
             )
