@@ -12,6 +12,7 @@ class FeaturesList extends Component {
                         <h3>{feature}</h3>
                     </legend>
                     <Feature 
+                    feature={feature}
                     features={this.props.features}
                     value={this.props.value}/>
                 </fieldset>
