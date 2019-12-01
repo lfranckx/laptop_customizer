@@ -12,7 +12,7 @@ class Cart extends Component {
                 <div className="summary__option__label">{feature} </div>
                 <div className="summary__option__value">{selectedOption.name}</div>
                 <div className="summary__option__cost">
-                  {this.props.value.format(selectedOption.cost)}
+                  {this.props.USPrice.format(selectedOption.cost)}
                 </div>
               </div>
             );
@@ -28,7 +28,7 @@ class Cart extends Component {
                     <div className="summary__total">
                     <div className="summary__total__label">Total</div>
                     <div className="summary__total__value">
-                        {this.props.value.format(total)}
+                        {this.props.USPrice.format(total)}
                     </div>
                 </div>
             </section>

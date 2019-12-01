@@ -50,12 +50,13 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
           <FeaturesList 
+          selected={this.state.selected}
           features={this.props.features}
-          value={USCurrencyFormat}
+          USPrice={USCurrencyFormat}
           />
           <Cart 
           selected={this.state.selected}
-          value={USCurrencyFormat}
+          USPrice={USCurrencyFormat}
           />
       </div>
     )

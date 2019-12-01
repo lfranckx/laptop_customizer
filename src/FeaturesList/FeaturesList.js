@@ -6,6 +6,7 @@ class FeaturesList extends Component {
         // console.log(this.props.features)
         const featuresList = Object.keys(this.props.features).map((feature, idx) => {
             const featureHash = feature + '-' + idx;
+
             return (
                 <fieldset className="feature" key={featureHash}>
                     <legend className="feature__name">
@@ -13,8 +14,9 @@ class FeaturesList extends Component {
                     </legend>
                     <Feature 
                     feature={feature}
+                    selected={this.props.selected}
                     // features={this.props.features}
-                    value={this.props.value}/>
+                    USPrice={this.props.USPrice}/>
                 </fieldset>
             )
         })
