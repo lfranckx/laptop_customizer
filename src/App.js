@@ -50,7 +50,6 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
           <FeaturesList 
-          onChange={feature=>this.updateFeature(feature)}
           features={this.props.features}
           value={USCurrencyFormat}
           />
