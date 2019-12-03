@@ -48,15 +48,18 @@ class App extends Component {
     return (
       <div className="App">
           <Header />
-          <FeaturesList 
-          selected={this.state.selected}
-          features={this.props.features}
-          USPrice={USCurrencyFormat}
-          />
-          <Cart 
-          selected={this.state.selected}
-          USPrice={USCurrencyFormat}
-          />
+          <main>
+            <FeaturesList 
+            selected={this.state.selected}
+            features={this.props.features}
+            USPrice={USCurrencyFormat}
+            handleUpdate={this.updateFeature}
+            />
+            <Cart 
+            selected={this.state.selected}
+            USPrice={USCurrencyFormat}
+            />
+          </main>
       </div>
     )
   }
