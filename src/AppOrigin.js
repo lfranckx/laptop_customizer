@@ -44,10 +44,8 @@ class App extends Component {
   };
 
   render() {
-    //   FEATURES LIST SECTION
     const features = Object.keys(this.props.features).map((feature, idx) => {
       const featureHash = feature + '-' + idx;
-    //   FEATURE ITEM
       const options = this.props.features[feature].map(item => {
         const itemHash = slugify(JSON.stringify(item));
         return (
@@ -66,7 +64,6 @@ class App extends Component {
           </div>
         );
       });
-      //  FEATURES LIST SECTION
       return (
         <fieldset className="feature" key={featureHash}>
           <legend className="feature__name">

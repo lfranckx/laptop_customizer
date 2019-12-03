@@ -5,7 +5,7 @@ import slugify from 'slugify';
 
 class Feature extends Component {
     render() {
-        console.log(this.props.selected)
+        // console.log(this.props.selected)
         console.log(this.props.feature)
         const feature = this.props.feature
         const options = feature.map(item => {
