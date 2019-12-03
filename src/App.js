@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from './Header/Header'
 import FeaturesList from './FeaturesList/FeaturesList'
 import Cart from './Cart/Cart'
 
@@ -46,9 +47,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
-          <h1>ELF Computing | Laptops</h1>
-        </header>
+          <Header />
           <FeaturesList 
           selected={this.state.selected}
           features={this.props.features}
