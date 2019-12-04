@@ -14,7 +14,6 @@ class FeaturesList extends Component {
                         <h3>{feature}</h3>
                     </legend>
                     <Feature 
-                    name={this.props.feature}
                     feature={this.props.features[feature]}
                     selected={this.props.selected}
                     features={this.props.features}
@@ -26,7 +25,9 @@ class FeaturesList extends Component {
         })
 
         return (
+            <div>
                 {features}
+            </div>
         )
     }
 }

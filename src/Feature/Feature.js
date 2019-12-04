@@ -7,7 +7,6 @@ class Feature extends Component {
     render() {
         // console.log(this.props.selected)
         console.log(this.props.feature)
-        console.log(this.props.name)
         const options = this.props.feature.map(item => {
           console.log(item)
             const itemHash = slugify(JSON.stringify(item));
@@ -17,7 +16,7 @@ class Feature extends Component {
                   type="radio"
                   id={itemHash}
                   className="feature__option"
-                  name={slugify(this.props.name)}
+                  name={slugify(this.props.feature.name)}
                   checked={item.name === this.props.selected[this.props.name].name}
                   onChange={e => this.updateFeature(this.props.name, item)}
                 />
@@ -28,7 +27,9 @@ class Feature extends Component {
             );
         });
         return (
+          <div>
             {options}
+          </div>
         )
     }
 }
