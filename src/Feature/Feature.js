@@ -21,7 +21,7 @@ class Feature extends Component {
                   className="feature__option"
                   name={slugify(item.name)}
                   checked={item.name === this.props.selected[this.props.name].name}
-                  onChange={e => this.props.handleUpdate(this.props.name, item)}
+                  onChange={e => this.props.handleUpdate(item.name, item)}
                 />
                 <label htmlFor={itemHash} className="feature__label">
                   {item.name} ({this.props.USPrice.format(item.cost)})
