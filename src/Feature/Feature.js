@@ -7,6 +7,7 @@ class Feature extends Component {
     render() {
         // console.log(this.props.selected)
         console.log(this.props.feature)
+        console.log(this.props.name)
         const options = this.props.feature.map(item => {
           console.log(item)
             const itemHash = slugify(JSON.stringify(item));
