@@ -16,6 +16,7 @@ class FeaturesList extends Component {
                     feature={this.props.features[feature]}
                     selected={this.props.selected}
                     USPrice={this.props.USPrice}
+                    // handleUpdate={this.props.handleUpdate}
                     handleUpdate={(name, item) => {this.props.handleUpdate(name, item)}}
                     />
                 </fieldset>
