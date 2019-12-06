@@ -5,6 +5,7 @@ import slugify from 'slugify'
 
 class Feature extends Component {
     render() {
+      console.log(this.props.handleUpdate)
         const options = this.props.feature.map(item => {
             const itemHash = slugify(JSON.stringify(item));
             return (
@@ -15,8 +16,7 @@ class Feature extends Component {
                   className="feature__option"
                   name={slugify(item.name)}
                   checked={item.name === this.props.selected[this.props.name].name}
-                  // onClick={e => this.props.handleUpdate(this.props.name, item)}
-                  handleupdate={(name, item) => {this.props.handleupdate(name, item)}}
+                  onClick={e => this.props.handleUpdate(this.props.name, item)}
                 />
                 <label htmlFor={itemHash} className="feature__label">
                   {item.name} ({this.props.USPrice.format(item.cost)})
