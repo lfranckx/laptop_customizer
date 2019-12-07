@@ -3,6 +3,7 @@ import Feature from '../Feature/Feature'
 
 class FeaturesList extends Component {
     render() {
+        console.log(this.props.handleUpdate)
         const features = Object.keys(this.props.features)
         .map((feature, idx) => {
             const featureHash = feature + '-' + idx;
@@ -16,8 +17,7 @@ class FeaturesList extends Component {
                     feature={this.props.features[feature]}
                     selected={this.props.selected}
                     USPrice={this.props.USPrice}
-                    // handleUpdate={this.props.handleUpdate}
-                    handleUpdate={(name, item) => {this.props.handleUpdate(name, item)}}
+                    handleUpdate={this.props.handleUpdate}
                     />
                 </fieldset>
             )
